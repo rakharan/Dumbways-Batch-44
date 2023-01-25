@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
     <script src="https://kit.fontawesome.com/1edd778b6f.js" crossorigin="anonymous"></script>
 </head>
+
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -37,9 +39,25 @@
 </head>
 
 <body>
-    <div style="margin: 20px 0 0 20px">
-        <a href="./index.html" style="text-decoration: none; color: black;">Go back to home</a>
-    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar"
+        style="background-color: rgb(208, 193, 193); width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 50px; height: 68px;">
+        <div style="display: flex; align-items: center; column-gap: 50px;">
+            <div>
+                <img src="./assets/img/brandwhite.png" alt="" height="33px">
+            </div>
+            <div class="navbarMenuLeft" style="display: flex; column-gap: 40px;">
+                <a href="./index.html" class="active">Home</a>
+                <a href="#">My Project</a>
+            </div>
+        </div>
+        <div class="navbarMenuRight">
+            <a href="./contact.html"
+                style="font-size: small; color: white; background-color: black; padding: 8px 15px; border-radius: 10px;">Contact
+                Me</a>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
     <div style="width: 350px; margin: 0 auto; margin-top: 100px;">
         <h1 class="formHeading">GET IN TOUCH</h1>
         <form action="submit">

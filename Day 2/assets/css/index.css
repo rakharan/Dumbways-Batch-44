@@ -36,10 +36,10 @@ a {
     column-gap: 20px;
 }
 
-.navbarMenuRight {
+.navbarMenuLeft {
     font-weight: medium;
 }
 
-.navbarMenuRight .active {
+.navbarMenuLeft .active {
     font-weight: bold;
 }
