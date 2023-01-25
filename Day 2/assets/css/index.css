@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: Poppins;
+}
+
+.navbar {
+    max-height: 68px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainContent {
+    background-color: #d7e2ea;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.mainCard {
+    background-color: white;
+    min-height: 100vh;
+    border-radius: 20px;
+    padding: 80px 50px;
+}
+
+.upperContact {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    column-gap: 20px;
+}
+
+.navbarMenuRight {
+    font-weight: medium;
+}
+
+.navbarMenuRight .active {
+    font-weight: bold;
+}
