@@ -151,4 +151,26 @@ li {
         padding: 20px 40px;
         font-size: larger;
     }
+
+    .navbar .logo img {
+        width: 50px;
+    }
+}
+
+/* BELOW ARE CSS FOR CONTACT.HTML */
+
+.formContainer {
+    width: 230px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.formHeading {
+    margin-top: 30px;
+}
+
+@media(min-width:768px) {
+    .formContainer {
+        width: 300px;
+    }
 }

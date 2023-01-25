@@ -40,26 +40,23 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar"
-        style="background-color: rgb(208, 193, 193); width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 50px; height: 68px;">
-        <div style="display: flex; align-items: center; column-gap: 50px;">
-            <div>
-                <img src="./assets/img/brandwhite.png" alt="" height="33px">
+    <nav class="navbar">
+        <div class="leftMenu">
+            <div class="logo">
+                <img src="./assets/img/brandwhite.png" alt="" width="33px">
             </div>
-            <div class="navbarMenuLeft" style="display: flex; column-gap: 40px;">
-                <a href="./index.html" class="active">Home</a>
-                <a href="#">My Project</a>
-            </div>
+            <ul class="leftNavbarLink">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
         </div>
-        <div class="navbarMenuRight">
-            <a href="./contact.html"
-                style="font-size: small; color: white; background-color: black; padding: 8px 15px; border-radius: 10px;">Contact
-                Me</a>
+        <div class="rightMenu">
+            <a href="./contact.html">Contact Me</a>
         </div>
     </nav>
     <!-- NAVBAR END -->
-    <div style="width: 350px; margin: 0 auto; margin-top: 100px;">
-        <h1 class="formHeading">GET IN TOUCH</h1>
+    <div class="formContainer">
+        <h1 class=" formHeading">GET IN TOUCH</h1>
         <form action="submit">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" style="width: 100%; padding: 5px;">
