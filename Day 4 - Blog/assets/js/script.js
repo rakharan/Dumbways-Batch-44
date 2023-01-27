@@ -78,6 +78,7 @@ const showData = () => {
         </div>
         <div class="detailsParagraph">
             ${projects[i].description}
+            <div><a href="./projectDetail.html" class="readMore">Read More</a></div>
         </div>
         <div class="detailsTech">
         ${technologies.includes("react") ? `<i class="fa-brands fa-react fa-2xl"></i>` : ``}
