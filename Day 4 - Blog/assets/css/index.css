@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #030e12;
+    font-family: Poppins;
+}
+
+body {
+    background: rgb(246, 196, 83);
+    background: linear-gradient(180deg, rgba(246, 196, 83, 1) 28%, rgba(240, 160, 75, 1) 46%);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:not(.contactNavbar, .projectButton a):hover {
+    border-bottom: 2px solid black;
+}
+
+.active {
+    font-weight: bold;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    top: 0;
+    max-height: 68px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+.leftMenu {
+    display: flex;
+    align-items: center;
+}
+
+.rightMenu a {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.leftNavbarLink {
+    margin-left: 30px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.mainContent {
+    background-color: #d7e2ea;
+    padding: 40px;
+}
+
+.mainContentText p {
+    font-size: 10px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.mainContentContact {
+    margin-top: 20px;
+    font-size: 10px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.mainContentContact a {
+    background-color: black;
+    color: white;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+}
+
+
+.mainContentSocmed {
+    display: flex;
+    font-size: 10px;
+}
+
+.mainContentSocmed ul {
+    display: flex;
+    margin-top: 20px;
+    column-gap: 20px;
+}
+
+.profile {
+    width: 50%;
+    margin: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px;
+}
+
+.profileImage {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.profileImage img {
+    width: 100%;
+}
+
+.profileDesc {
+    text-align: center;
+    font-size: 10px;
+    margin: 10px 0;
+    padding-bottom: 10px;
+}
+
+@media(min-width:768px) {
+    .mainContent {
+        display: flex;
+        margin: 50px;
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        align-items: center;
+    }
+
+    .mainContentLeft {
+        padding: 0 20px;
+    }
+
+    .profileImage {
+        margin-top: 0;
+    }
+
+    .profile {
+        width: 70%;
+    }
+
+    .mainContent p,
+    .mainContentContact,
+    .mainContentSocmed {
+        font-size: 12px;
+    }
+
+    .profileDesc {
+        font-size: larger;
+    }
+}
+
+@media(min-width: 1024px) {
+    .navbar {
+        padding: 20px 40px;
+        font-size: larger;
+    }
+
+    .navbar .logo img {
+        width: 50px;
+    }
+
+
+
+    .mainContent p,
+    .mainContentContact,
+    .mainContentSocmed {
+        font-size: 16px;
+    }
+
+
+}
+
+/* MY PROJECT FORM CSS STARTS BELOW */
+.formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+
+form .technologiesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formSubmit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitButton {
+    background-color: blueviolet;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+input:not(.checkbox),
+textarea {
+    width: 100%;
+}
+
+input,
+textarea {
+    margin-bottom: 8px;
+}
+
+@media(min-width: 1024px) {
+    .navbar {
+        padding: 20px 40px;
+        font-size: larger;
+    }
+
+    .navbar .logo img {
+        width: 50px;
+    }
+
+}
+
+
+/* MY PROJECT LIST CSS STARTS BELOW */
+.projectListContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    padding: 0 30px;
+}
+
+.projectList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.projectListItem {
+    width: 95%;
+    box-shadow: rgba(17, 12, 46, 0.25) 0px 48px 100px 0px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(237, 235, 235);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.projectThumbnail img {
+    border-radius: 10px;
+}
+
+.projectDetails {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.projectDetails .detailsHeader span {
+    opacity: 0.7;
+}
+
+.detailsParagraph {
+    margin-top: 15px;
+}
+
+.detailsTech {
+    display: flex;
+    margin: 40px 0 40px 0;
+    column-gap: 20px;
+}
+
+.projectButton {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.projectButton a {
+    background-color: #030e12;
+    color: white;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/* RESPONSIVE STYLING STARTS HERE */
+@media(min-width:640px) {
+    .projectList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .projectListItem {
+        margin-bottom: 0;
+        flex: 0 1 45%
+    }
+
+}
+
+@media(min-width:1024px) {
+    .projectListContainer {
+        margin-top: 80px;
+    }
+
+    .projectListItem {
+        flex: 0 1 30%;
+    }
+}
