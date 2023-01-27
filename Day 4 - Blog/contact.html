@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakha | Contact Me</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="https://kit.fontawesome.com/1edd778b6f.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+
+        font-family: Poppins;
+    }
+
+    .formHeading {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    input,
+    select,
+    textarea {
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+</style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="leftMenu">
+            <div class="logo">
+                <img src="./assets/img/brandwhite.png" alt="" width="33px">
+            </div>
+            <ul class="leftNavbarLink">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="rightMenu">
+            <a href="./contact.html">Contact Me</a>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+    <div class="formContainer">
+        <h1 class=" formHeading">GET IN TOUCH</h1>
+        <form action="submit">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" style="width: 100%; padding: 5px;">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" style="width: 100%; padding: 5px;">
+            <label for="phone">Phone Number</label>
+            <input type="text" name="phone" id="phone" style="width: 100%; padding: 5px;">
+            <label for="subject">Subject</label>
+            <select name="Subject" id="subject" style="width: 100%; padding: 5px;">
+                <option value="wth">I want to hire you</option>
+                <option value="wta">I want to ask about something</option>
+                <option value="wtt">Let's talk</option>
+                <option value="wtc">Let's collaborate</option>
+            </select>
+            <label for="description">Your Message</label>
+            <textarea name="" id="description" cols="30" rows="10"
+                style="width: 100%; padding: 5px; resize: none;"></textarea>
+            <div style="display: flex; justify-content: flex-end;">
+                <button
+                    style="padding: 5px 10px; background-color: orangered; border: none; border-radius: 10px; color: white;">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
