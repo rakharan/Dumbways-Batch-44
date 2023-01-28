@@ -48,17 +48,19 @@
                     <div class="projectDate">
                         <div>
                             <label for="startDate">Start Date</label>
-                            <input type="datetime-local" name="startDate" id="startDate" required>
+                            <input type="datetime-local" name="startDate" id="startDate" min="2010-01-01T00:00"
+                                max="2030-12-31T00:00" required>
                         </div>
                         <div>
                             <label for="endDate">End Date</label>
-                            <input type="datetime-local" name="endDate" id="endDate" required>
+                            <input type="datetime-local" name="endDate" id="endDate" min="2010-01-01T00:00"
+                                max="2030-12-31T00:00" required>
                         </div>
                     </div>
                     <div class="projectDesc">
                         <label for="description">Description</label>
-                        <textarea name="description" id="description" cols="10" rows="5" style="resize: none;"
-                            required></textarea>
+                        <textarea name="description" id="description" cols="10" rows="5"
+                            style="resize: none;"></textarea>
                     </div>
                     <div class="projectTech">
                         <label for="tech">Technologies</label>
