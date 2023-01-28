@@ -1,7 +1,4 @@
 const projects = []
-
-let technologies = []
-
 const getData = () => {
 
 
@@ -18,22 +15,11 @@ const getData = () => {
 
     let description = document.getElementById('description').value
     let image = document.getElementById('image').files
-    let react = document.getElementById('react')
-    let nodejs = document.getElementById('node')
-    let javascript = document.getElementById('javascript')
-    let angular = document.getElementById('angular')
-    if (react.checked) {
-        technologies.push(react.id)
-    }
-    if (nodejs.checked) {
-        technologies.push(nodejs.id)
-    }
-    if (javascript.checked) {
-        technologies.push(javascript.id)
-    }
-    if (angular.checked) {
-        technologies.push(angular.id)
-    }
+    let isUsingReact = document.getElementById('react').checked
+    let isUsingNode = document.getElementById('node').checked
+    let isUsingJs = document.getElementById('javascript').checked
+    let isUsingAngular = document.getElementById('angular').checked
+
 
 
     // Convert spesific image to blob object
@@ -43,12 +29,15 @@ const getData = () => {
         title,
         date,
         description,
-        technologies,
+        isUsingReact,
+        isUsingAngular,
+        isUsingJs,
+        isUsingNode,
         image,
     }
 
     projects.push(dataProject)
-    console.log(projects)
+
     showData()
 }
 
@@ -56,9 +45,7 @@ const getData = () => {
 const form = document.getElementById('projectForm')
 form.addEventListener('submit', function handleSubmit(event) {
     event.preventDefault()
-
     form.reset()
-    technologies = []
 })
 
 
@@ -66,31 +53,34 @@ form.addEventListener('submit', function handleSubmit(event) {
 //arrow func to show list of projects
 const showData = () => {
     document.getElementById('projects').innerHTML = ""
-    for (let i = 0; i <= projects.length - 1; i++) {
-        document.getElementById('projects').innerHTML += `<div class="projectListItem">
-    <div class="projectThumbnail" id="projectThumbnail">
-        <img src="${projects[i].image}" width="100%" alt="">
-    </div>
-    <div class="projectDetails" id="projectDetails">
-        <div class="detailsHeader">
-            <h4>${projects[i].title} ${projects[i].date}</h4>
-            <span>durasi: 3 bulan</span>
-        </div>
-        <div class="detailsParagraph">
-            ${projects[i].description}
-            <div><a href="./projectDetail.html" class="readMore">Read More</a></div>
-        </div>
-        <div class="detailsTech">
-        ${technologies.includes("react") ? `<i class="fa-brands fa-react fa-2xl"></i>` : ``}
-        ${technologies.includes("node") ? `<i class="fa-brands fa-node fa-2xl"></i>` : ``}
-        ${technologies.includes("javascript") ? `<i class="fa-brands fa-js fa-2xl"></i>` : ``}
-        ${technologies.includes("angular") ? `<i class="fa-brands fa-angular fa-2xl"></i>` : ""}
-        </div>
-        <div class="projectButton">
-            <a href="#">Edit</a>
-            <a href="#">Delete</a>
-        </div>
-    </div>
-</div>`
-    }
+
+    projects.map((project) => {
+        return document.getElementById('projects').innerHTML +=
+            `<div class="projectListItem">
+             <div class="projectThumbnail" id="projectThumbnail">
+                 <img src="${project.image}" width="100%" alt="">
+             </div>
+            <div class="projectDetails" id="projectDetails">
+                 <div class="detailsHeader">
+                     <h4>${project.title} ${project.date}</h4>
+                     <span>durasi: 3 bulan</span>
+                 </div>
+                 <div class="detailsParagraph">
+                     ${project.description}
+                     <div><a href="./projectDetail.html" class="readMore">Read More</a></div>
+                 </div>
+                <div class="detailsTech">
+                 ${project.isUsingReact ? `<i class="fa-brands fa-react fa-2xl"></i>` : ``}
+                 ${project.isUsingNode ? `<i class="fa-brands fa-node fa-2xl"></i>` : ``}
+                 ${project.isUsingJs ? `<i class="fa-brands fa-js fa-2xl"></i>` : ``}
+                 ${project.isUsingAngular ? `<i class="fa-brands fa-angular fa-2xl"></i>` : ""}
+                </div>
+            <div class="projectButton">
+                     <a href="#">Edit</a>
+                     <a href="#">Delete</a>
+                 </div>
+             </div>
+         </div>
+        `
+    })
 }
