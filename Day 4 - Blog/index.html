@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakha | My Project</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="https://kit.fontawesome.com/1edd778b6f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="leftMenu">
+            <div class="logo">
+                <img src="./assets/img/brandwhite.png" alt="" width="33px">
+            </div>
+            <ul class="leftNavbarLink">
+                <li><a href="./home.html" class="active">Home</a></li>
+                <li><a href="./index.html">My Project</a></li>
+            </ul>
+        </div>
+        <div class="rightMenu">
+            <a class="contactNavbar" href="./contact.html">Contact Me</a>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- MAIN CONTENT -->
+
+    <!-- MAIN CONTENT FORM -->
+    <div class="projectFormContainer">
+
+        <div class="header">
+            <h2>
+                Add My Project
+            </h2>
+        </div>
+        <div>
+            <div>
+                <form onsubmit="getData()" id="projectForm">
+                    <div class="projectName">
+                        <label for="name">Project Name</label>
+                        <input type="text" id="projectTitle" required>
+                    </div>
+                    <div class="projectDate">
+                        <div>
+                            <label for="startDate">Start Date</label>
+                            <input type="date" name="startDate" id="startDate" min="2010-01-01T00:00" max="2030-12-31"
+                                required>
+                        </div>
+                        <div>
+                            <label for="endDate">End Date</label>
+                            <input type="date" name="endDate" id="endDate" min="2010-01-01T00:00" max="2030-12-31"
+                                required>
+                        </div>
+                    </div>
+                    <div class="projectDesc">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" cols="10" rows="5"
+                            style="resize: none;"></textarea>
+                    </div>
+                    <div class="projectTech">
+                        <label for="tech">Technologies</label>
+                        <div class="technologiesList">
+                            <div>
+                                <input type="checkbox" name="react" id="react" value="React Js" class="checkbox">
+                                <label for="react">React Js</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="node" id="node" value="Node Js" class="checkbox">
+                                <label for="node">Node Js</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="javascript" id="javascript" value="Javascript"
+                                    class="checkbox">
+                                <label for="javascript">Javascript</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="angular" id="angular" value="Angular" class="checkbox">
+                                <label for="angular">Angular</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="projectThumbnail">
+                        <label for="image">Upload Image</label>
+                        <input type="file" name="image" id="image" accept="image/png, image/gif, image/jpeg" required />
+                    </div>
+                    <div class="formSubmit">
+                        <button class="submitButton" style="cursor: pointer;">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- MAIN CONTENT FORM END -->
+
+    <!-- MAIN CONTENT LIST -->
+    <div class="header">
+        <h2>My Project</h2>
+    </div>
+    <div class="projectListContainer" id="projects">
+        <div class="projectList">
+            <!-- Project List Start Here -->
+            <div class="projectListItem">
+                <div class="projectThumbnail" id="projectThumbnail">
+                    <img src="./assets/img/project1.png" width="100%" alt="">
+                </div>
+                <div class="projectDetails" id="projectDetails">
+                    <div class="detailsHeader">
+                        <h4>Kotakode Clone - 2022</h4>
+                        <span>durasi: 2 bulan</span>
+                    </div>
+                    <div class="detailsParagraph">
+                        Kotakode Clone adalah sebuah clone dari website Kotakode yang saya buat untuk melatih skill
+                        front end development saya.
+                        <div><a href="./projectDetail.html" class="readMore">Read More</a></div>
+                    </div>
+                    <div class="detailsTech">
+                        <i class="fa-brands fa-react fa-2xl"></i>
+                        <i class="fa-brands fa-js fa-2xl"></i>
+                    </div>
+                </div>
+                <div class="projectButton">
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- MAIN CONTENT LIST END -->
+
+    <!-- MAIN CONTENT END -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
