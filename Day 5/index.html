@@ -31,7 +31,7 @@
     <!-- MAIN CONTENT -->
 
     <!-- MAIN CONTENT FORM -->
-    <div class="formContainer">
+    <div class="projectFormContainer">
 
         <div class="header">
             <h2>
@@ -43,16 +43,18 @@
                 <form onsubmit="getData()" id="projectForm">
                     <div class="projectName">
                         <label for="name">Project Name</label>
-                        <input type="text" id="projectTitle">
+                        <input type="text" id="projectTitle" required>
                     </div>
                     <div class="projectDate">
                         <div>
                             <label for="startDate">Start Date</label>
-                            <input type="datetime-local" name="startDate" id="startDate">
+                            <input type="date" name="startDate" id="startDate" min="2010-01-01T00:00" max="2030-12-31"
+                                required>
                         </div>
                         <div>
                             <label for="endDate">End Date</label>
-                            <input type="datetime-local" name="endDate" id="endDate">
+                            <input type="date" name="endDate" id="endDate" min="2010-01-01T00:00" max="2030-12-31"
+                                required>
                         </div>
                     </div>
                     <div class="projectDesc">
@@ -86,10 +88,10 @@
                     </div>
                     <div class="projectThumbnail">
                         <label for="image">Upload Image</label>
-                        <input type="file" name="image" id="image" accept="image/png, image/gif, image/jpeg" />
+                        <input type="file" name="image" id="image" accept="image/png, image/gif, image/jpeg" required />
                     </div>
                     <div class="formSubmit">
-                        <button class="submitButton">Submit</button>
+                        <button class="submitButton" style="cursor: pointer;">Submit</button>
                     </div>
                 </form>
             </div>
@@ -98,14 +100,38 @@
     <!-- MAIN CONTENT FORM END -->
 
     <!-- MAIN CONTENT LIST -->
+    <div class="header">
+        <h2>My Project</h2>
+    </div>
     <div class="projectListContainer" id="projects">
-        <div class="header">
-            <h2>My Project</h2>
-        </div>
         <div class="projectList">
             <!-- Project List Start Here -->
-
+            <div class="projectListItem">
+                <div class="projectThumbnail" id="projectThumbnail">
+                    <img src="./assets/img/project1.png" width="100%" alt="">
+                </div>
+                <div class="projectDetails" id="projectDetails">
+                    <div class="detailsHeader">
+                        <h4>Kotakode Clone - 2022</h4>
+                        <span>durasi: 2 bulan</span>
+                    </div>
+                    <div class="detailsParagraph">
+                        Kotakode Clone adalah sebuah clone dari website Kotakode yang saya buat untuk melatih skill
+                        front end development saya.
+                        <div><a href="./projectDetail.html" class="readMore">Read More</a></div>
+                    </div>
+                    <div class="detailsTech">
+                        <i class="fa-brands fa-react fa-2xl"></i>
+                        <i class="fa-brands fa-js fa-2xl"></i>
+                    </div>
+                </div>
+                <div class="projectButton">
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
     <!-- MAIN CONTENT LIST END -->
 

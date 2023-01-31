@@ -59,26 +59,28 @@
         <h1 class=" formHeading">GET IN TOUCH</h1>
         <form action="submit">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" style="width: 100%; padding: 5px;">
+            <input type="text" name="name" id="name" style="width: 100%; padding: 5px;" required>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" style="width: 100%; padding: 5px;">
+            <input type="email" name="email" id="email" style="width: 100%; padding: 5px;" required>
             <label for="phone">Phone Number</label>
-            <input type="text" name="phone" id="phone" style="width: 100%; padding: 5px;">
+            <input type="text" name="phone" id="phone" style="width: 100%; padding: 5px;" required>
             <label for="subject">Subject</label>
-            <select name="Subject" id="subject" style="width: 100%; padding: 5px;">
+            <select name="Subject" id="subject" style="width: 100%; padding: 5px;" required>
                 <option value="wth">I want to hire you</option>
                 <option value="wta">I want to ask about something</option>
                 <option value="wtt">Let's talk</option>
                 <option value="wtc">Let's collaborate</option>
             </select>
             <label for="description">Your Message</label>
-            <textarea name="" id="description" cols="30" rows="10"
-                style="width: 100%; padding: 5px; resize: none;"></textarea>
+            <textarea name="" id="description" cols="30" rows="10" style="width: 100%; padding: 5px; resize: none;"
+                required></textarea>
             <div style="display: flex; justify-content: flex-end;">
                 <button
-                    style="padding: 5px 10px; background-color: orangered; border: none; border-radius: 10px; color: white;">Submit</button>
+                    style="padding: 5px 10px; background-color: orangered; border: none; border-radius: 10px; color: white;"
+                    type="button" onclick="getData()">Submit</button>
             </div>
         </form>
+        <script src="./assets/js/form.js"></script>
     </div>
 </body>
 
